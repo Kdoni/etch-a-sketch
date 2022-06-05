@@ -1,0 +1,12 @@
+.board{
+    background-color: red;
+    transform: translate(50%, -50%);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    height: 60vh;
+    width: 60vh;
+    display:flex;
+    flex-wrap: wrap;
+    flex-grow:1;
+}
