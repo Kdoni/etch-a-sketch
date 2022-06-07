@@ -1,3 +1,13 @@
+body{
+    font-size: 12px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .toggleBtn{
     position: relative;
     display:flex;
@@ -54,20 +64,13 @@ input:checked + .slider:before{
 }
 
 .board{
-    background-color: white;
-    height: 60vh;
-    width: 60vh;
+    height: 50vh;
+    width: 50vh;
     display:flex;
     flex-wrap: wrap;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
 }
 .pixel{
     background-color: black;
-    min-width: 1%;
-    min-height: 1%;
-    flex-grow: 1;
+    width: 1.5625%;
+    height: 1.5625%;
 }
