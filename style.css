@@ -8,11 +8,10 @@
     width: 60vh;
     display:flex;
     flex-wrap: wrap;
-    flex-grow:1;
 }
 .pixel{
     background-color: black;
-    min-width: 40.96px;
-    min-height: 40.96px;
-    position: absolute;
+    min-width: 1%;
+    min-height: 1%;
+    flex-grow: 1;
 }
