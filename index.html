@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
-    <link rel ="icon" type="image/x-icon" href = "/assets/favicon.ico">
-    <link rel ="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Etch-A-Sketch</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="myscript.js"></script>
 </head>
+
 <body>
-    <div class ="container">
-        <h1>Etch-a-Sketch</h1>
-        <label class = toggleBtn>
-            <span class = "onOff">Drawing OFF</span>
-            <input type = "checkbox"/>
-            <span class = "slider round"></span>
-        </label>
-    </div>
-    <div class = "board"></div>
+    <header>
+        <h1><em>Etch-A-Sketch</em></h1>
+        <figure class="quote">
+            <q>Everything you can image is real.</q>
+            <figcaption>&mdash; Pablo Picasso</figcaption>
+        </figure>
+    </header>
+    <main>
+        <div class="drawing area"></div>
+        <!-- <img class="splatter" src="/assets/black splatter.svg"
+            alt="Black Paint Splatter">
+        <img class="splatter another" src="/assets/another splatter.svg"
+            alt="Another Black Splatter"> -->
+        <aside>
+            <ul>
+                <li class="palette"><input type="color" id="favcolor"
+                        name="favcolor" value="#ff0000"></li>
+                <li class="pride"><img src="/assets/rainbow.svg"
+                        alt="A rainbow"></li>
+                <li class="reset"><img src="/assets/reset.svg"
+                        alt="A reset button"></li>
+                <li class="grid bar">
+                    <div class="middle">
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="50">
+                            <p><strong>16X16</strong></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>Inspired by "THE ODIN PROJECT"</p>
+        <p>An image linking to my social media</p>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,77 @@
+body {}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* images' positioning*/
+img {
+    width: 5em;
+    height: 5em;
+}
+
+.splatter {
+    top: 2em;
+    right: 30em;
+}
+
+.another {
+    top: 50em;
+    right: 50em;
+}
+
+/* the main element */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+/* aside element and lists*/
+aside {
+    align-self: flex-start
+}
+
+ul {
+    list-style-type: none;
+}
+
+.drawing {
+    background-color: red;
+    width: 70vh;
+    height: 70vh;
+    z-index: 999;
+}
+
+input {
+    background-color: transparent;
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+    border: none;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+
+}
+
+p {
+    color: white;
+}
