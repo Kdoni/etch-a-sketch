@@ -18,6 +18,11 @@ img {
     height: 5em;
 }
 
+.github {
+    height: 1.5em;
+    width: 1.5em;
+}
+
 .splatter {
     top: 2em;
     right: 30em;
@@ -74,4 +79,15 @@ footer {
 
 p {
     color: white;
+}
+
+strong {
+    color: black;
+}
+
+/* CSS grid drawing area */
+.drawing {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
