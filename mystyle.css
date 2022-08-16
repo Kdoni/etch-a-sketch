@@ -88,6 +88,11 @@ strong {
 /* CSS grid drawing area */
 .drawing {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.item {
+    background-color: white;
+    border: 1px solid pink;
 }
