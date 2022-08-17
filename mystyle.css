@@ -1,4 +1,6 @@
-body {}
+body {
+    font-family: cursive;
+}
 
 * {
     margin: 0;
@@ -12,6 +14,10 @@ header {
     flex-direction: column;
 }
 
+figcaption {
+    font-style: italic;
+}
+
 /* images' positioning*/
 img {
     width: 5em;
@@ -19,18 +25,28 @@ img {
 }
 
 .github {
-    height: 1.5em;
-    width: 1.5em;
+    height: 1em;
+    width: 1em;
+    transition: 1s;
+}
+
+.github:hover {
+    transform: rotate(360deg);
 }
 
 .splatter {
-    top: 2em;
-    right: 30em;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 .another {
-    top: 50em;
-    right: 50em;
+    top: -3em;
+    left: 60em;
 }
 
 /* the main element */
@@ -45,11 +61,16 @@ main {
 
 /* aside element and lists*/
 aside {
-    align-self: flex-start
+    align-self: flex-start;
+    margin-right: 1em;
 }
 
 ul {
     list-style-type: none;
+}
+
+li {
+    margin-top: 0.5em;
 }
 
 .drawing {
@@ -74,6 +95,9 @@ footer {
     width: 100%;
     bottom: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 
 }
 
@@ -83,16 +107,20 @@ p {
 
 /* CSS grid drawing area */
 .drawing {
+    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     user-select: none;
     -webkit-user-drag: none;
+    box-shadow: 29px 27px 5px 14px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 29px 27px 5px 14px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 29px 27px 5px 14px rgba(0, 0, 0, 0.51);
 }
 
 .item {
     background-color: white;
-    border: 1px solid pink;
+    border: none;
     user-select: none;
     -webkit-user-drag: none;
 }
