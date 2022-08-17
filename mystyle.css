@@ -96,3 +96,10 @@ strong {
     background-color: white;
     border: 1px solid pink;
 }
+
+/*Rainbow color styling*/
+
+.clicked {
+    transform: scale(50px);
+    background-color: lightgreen;
+}
