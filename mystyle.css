@@ -81,10 +81,6 @@ p {
     color: white;
 }
 
-strong {
-    color: black;
-}
-
 /* CSS grid drawing area */
 .drawing {
     display: grid;
@@ -125,4 +121,20 @@ strong {
 button {
     background-color: transparent;
     border: none;
+}
+
+/*reset button*/
+
+.reseto {
+    transition: 0.5s;
+}
+
+.reseto:hover {
+    transform: rotate(-140deg);
+}
+
+/* Slider bar */
+
+.dimensions {
+    color: #000;
 }

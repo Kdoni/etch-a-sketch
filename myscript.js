@@ -1,5 +1,6 @@
 //Simple brushing through the grid container
 
+const picasso = document.querySelector(".drawing");
 const grid = document.getElementsByClassName("item");
 for (let i = 0; i < grid.length; i++) {
     grid[i].addEventListener("mouseover", (e) => {
@@ -55,3 +56,14 @@ palette.addEventListener("click", (e) => {
     pride.classList.remove("clicked");
     eraser.classList.remove("toggled");
 });
+
+//Dividing the drawing board into multiple divs//
+var dimensions = document.querySelector(".dimensions");
+var numerons = document.querySelector("input[type=range]");
+dimensions.innerHTML = `${numerons.value} X ${numerons.value}`;
+
+numerons.addEventListener("input", (e) => {
+    dimensions.innerHTML = `${numerons.value} X ${numerons.value}`;
+});
+
+
