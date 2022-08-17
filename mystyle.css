@@ -90,16 +90,39 @@ strong {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .item {
     background-color: white;
     border: 1px solid pink;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 /*Rainbow color styling*/
 
 .clicked {
-    transform: scale(50px);
     background-color: lightgreen;
+    transition-duration: 0.5s;
+}
+
+/* Eraser styling*/
+.eraser {
+    border: 1px solid transparent;
+    transition: 0.5s;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.toggled {
+    border: 1px solid red;
+    border-radius: 100%;
+    transform: rotate(-45deg);
+}
+
+button {
+    background-color: transparent;
+    border: none;
 }
