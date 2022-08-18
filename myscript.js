@@ -97,6 +97,11 @@ function populateGrid() {
                 e.target.style.backgroundColor = value.value;
             }
         });
+        item.addEventListener("click", (e) => {
+            let color = removeRGB(e.target.style.backgroundColor);
+            let hexColor = rgbToHex(parseInt(color[0]), parseInt(color[1]), parseInt(color[2]));
+            e.target.style.backgroundColor = darken(hexColor, -50);
+        })
     }
 }
 populateGrid();
@@ -105,19 +110,46 @@ numerons.addEventListener("change", (e) => {
     populateGrid();
 })
 
-//When clicking on a grid-item it should progressively darken
+// When clicking on a grid-item it should progressively darken
 
-// function LightenDarkenColor(col, amt) {
-//     var num = parseInt(col, 16);
-//     var r = (num >> 16) + amt;
-//     var b = ((num >> 8) & 0x00FF) + amt;
-//     var g = (num & 0x0000FF) + amt;
-//     var newColor = g | (b << 8) | (r << 16);
-//     return newColor.toString(16);
-// }
+const darken = (hexColor, magnitude) => {
+    hexColor = hexColor.replace(`#`, ``);
+    if (hexColor.length === 6) {
+        const decimalColor = parseInt(hexColor, 16);
+        let r = (decimalColor >> 16) + magnitude;
+        r > 255 && (r = 255);
+        r < 0 && (r = 0);
+        let g = (decimalColor & 0x0000ff) + magnitude;
+        g > 255 && (g = 255);
+        g < 0 && (g = 0);
+        let b = ((decimalColor >> 8) & 0x00ff) + magnitude;
+        b > 255 && (b = 255);
+        b < 0 && (b = 0);
+        return `#${(g | (b << 8) | (r << 16)).toString(16)}`;
+    } else {
+        return hexColor;
+    }
+};
 
-// var darken = document.querySelector(".item");
-// darken.addEventListener("click", (e) => {
-//     let value = document.getElementById("favcolor");
-//     LightenDarkenColor(value.value, -40);
-// })
+//Rgb to Hex converter//
+
+function componentToHex(c) {
+    let hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+
+
+function removeRGB(rgb) {
+    var result = [];
+    for (let i = 0; i < rgb.length; i++) {
+        if (rgb[i] !== "r" && rgb[i] !== "g" && rgb[i] !== "b" && rgb[i] !== "(" && rgb[i] !== ")" && rgb[i] !== ",") {
+            result.push(rgb[i]);
+        }
+    }
+    return result.join("").split(" ");
+}

@@ -16,12 +16,13 @@ header {
 
 figcaption {
     font-style: italic;
+    padding-bottom: 1em;
 }
 
 /* images' positioning*/
 img {
-    width: 5em;
-    height: 5em;
+    width: 10vh;
+    height: 10vh;
 }
 
 .github {
@@ -42,11 +43,7 @@ img {
     height: 250px;
     -webkit-user-drag: none;
     user-select: none;
-}
-
-.another {
-    top: -3em;
-    left: 60em;
+    z-index: -1112;
 }
 
 /* the main element */
@@ -61,8 +58,8 @@ main {
 
 /* aside element and lists*/
 aside {
-    align-self: flex-start;
     margin-right: 1em;
+    margin-left: -10%;
 }
 
 ul {
@@ -75,17 +72,25 @@ li {
 
 .drawing {
     background-color: red;
-    width: 70vh;
-    height: 70vh;
+    width: 60vh;
+    height: 60vh;
     z-index: 999;
 }
 
 input {
     background-color: transparent;
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
     overflow: hidden;
     border: none;
+}
+
+input[type="range"] {
+    width: 6em;
+}
+
+input[type="color"] {
+    margin-left: 10px;
 }
 
 /* Footer */
@@ -165,4 +170,61 @@ button {
 
 .dimensions {
     color: #000;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 320px) {
+    aside {
+        transform: rotate(-90deg);
+        margin-top: -40%;
+        margin-bottom: -100%;
+    }
+
+    li {
+        transform: rotate(90deg);
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+
+    .drawing {
+        box-shadow: none;
+    }
+
+    p {
+        display: inline;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    aside {
+        transform: rotate(-90deg);
+        margin-top: -5em;
+        margin-bottom: -100%;
+    }
+
+    li {
+        transform: rotate(90deg);
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .drawing {
+        box-shadow: none;
+    }
 }
